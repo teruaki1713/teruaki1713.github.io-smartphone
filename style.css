@@ -2,7 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-size: 40px; 
+	font-size: 40px;
 }
 /*ヘッダー*/
 .header {
@@ -14,14 +14,10 @@
 	display: block;
 }
 
-.header:hover {
-	opacity: 0.7;
-}
-
 
 /*メインボックス*/
 main {
-	width: 1050px;
+	width: 100%;
 	background: #f4f5f7;
 	margin-left: auto;
 	margin-right: auto;
@@ -30,7 +26,7 @@ main {
 
 /*選択範囲のボックス*/
 .select {
-	width: 1000px;
+	width: 100%;
 	background: ;
 	margin-left: auto;
 	margin-right: auto;
@@ -54,6 +50,7 @@ main {
 	float: left;
 	margin-top: 2px;
 	margin-left: 20px;
+	width: 150px;
 }
 
 .kara {
@@ -65,19 +62,20 @@ main {
 	margin-left: 10px;
 	float: left;
 	margin-right: 40px;
+	width: 150px;
 }
 
 /*問題の表示領域*/
 .box {
-	width: 1000px;
+	width: ;
 	margin-left: auto;
 	margin-right: auto;
 	background: #ccf9cc;
-	height: 250px;
+	height: 700px;
 }
 
 .Qnumber {
-	font-size: 30px;
+	font-size: 60px;
 	margin-left: 10px;
 	padding-right: 50px;
 }
@@ -92,8 +90,8 @@ main {
 }
 
 .input {
-	width: 996px;
-	height: 23px;
+	width: 100%;
+	height: 50px;
 	margin-left: ;
 }
 
@@ -108,23 +106,19 @@ main {
 #text-button {
   display: block;
   cursor: pointer;
-  width: 100%;
+  width: 90%;
   text-align: center;
   border: 1px solid #232323;
   background: white;
-  opacity: 0.7;
+  opacity: 1;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-#text-button:hover{
-	opacity: 1;
-}
-
-.check {
-}
 
 /*使い方の表示領域*/
 .use {
-	width: 1000px;
+	width: 100%;
 	height: ;
 	background: ;
 	margin-left: auto;
@@ -137,14 +131,3 @@ main {
 	margin-bottom: 30px;
 	margin-left: 20px;
 }
-
-/*テスト範囲の表示領域*/
-.text {
-	width: 1000px;
-	background: yellow;
-	margin-top: 30px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/*フッター*/
