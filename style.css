@@ -90,11 +90,12 @@ main {
 }
 
 .input {
-	width: 100%;
+	display: block;
+	width: 95%;
 	height: 50px;
-	margin-left: ;
+	margin-right: auto;
+	margin-left: auto;
 }
-
 .a1 {
 	border: none;
 	outline: none;
