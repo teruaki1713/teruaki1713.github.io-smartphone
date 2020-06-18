@@ -1,0 +1,150 @@
+/*共通部分*/
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 17px;
+}
+/*ヘッダー*/
+.header {
+	float: left;
+	width: 50%;
+	background: black;
+	color: white;
+	text-align: center;
+	display: block;
+}
+
+.header:hover {
+	opacity: 0.7;
+}
+
+
+/*メインボックス*/
+main {
+	width: 1050px;
+	background: #f4f5f7;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 200px;
+}
+
+/*選択範囲のボックス*/
+.select {
+	width: 1000px;
+	background: ;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 130px;
+}
+
+.max {
+
+}
+
+.type {
+	float: left;
+}
+
+.textp {
+	float: left;
+	margin-left: 10px;
+}
+
+.select1 {
+	float: left;
+	margin-top: 2px;
+	margin-left: 20px;
+}
+
+.kara {
+	float: left;
+	margin-left: 10px;
+}
+
+.select2 {
+	margin-left: 10px;
+	float: left;
+	margin-right: 40px;
+}
+
+/*問題の表示領域*/
+.box {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #ccf9cc;
+	height: 250px;
+}
+
+.Qnumber {
+	font-size: 30px;
+	margin-left: 10px;
+	padding-right: 50px;
+}
+
+.Wnumber {
+	float: left;
+	margin-left: 10px;
+}
+
+.Pnumber {
+	
+}
+
+.input {
+	width: 996px;
+	height: 23px;
+	margin-left: ;
+}
+
+.a1 {
+	border: none;
+	outline: none;
+	width: 0px;
+	height: 0px;
+	background: #ccf9cc;
+}
+
+#text-button {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #232323;
+  background: white;
+  opacity: 0.7;
+}
+
+#text-button:hover{
+	opacity: 1;
+}
+
+.check {
+}
+
+/*使い方の表示領域*/
+.use {
+	width: 1000px;
+	height: ;
+	background: ;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.5;
+	padding-top: 50px;
+}
+
+.use p {
+	margin-bottom: 30px;
+	margin-left: 20px;
+}
+
+/*テスト範囲の表示領域*/
+.text {
+	width: 1000px;
+	background: yellow;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*フッター*/
