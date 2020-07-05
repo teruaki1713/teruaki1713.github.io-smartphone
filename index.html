@@ -8,10 +8,10 @@
 </head>
 <body>
 	<header>
-		<input class="waei header" type="button" value="(和▶︎英)ランダム" id="button1">
-		<input class="waei header" type="button" value="(和▶︎英)順番" id="button2">
-		<!--<input class="waei header" type="button" value="英単語(和▶︎英)">
-		<input class="waei header" type="button" value="英単語(和▶︎英)">-->
+		<input class="waei header" type="button" value="ランダム(重複なし)" id="button1">
+		<input class="waei header" type="button" value="順番" id="button2">
+		<input class="waei header" type="button" value="ランダム(重複あり)" id="button3">
+		<input class="waei header" type="button" value="comming soon・・・">	
 	</header>
 	<main>
 		
@@ -26,7 +26,7 @@
 
 			<input class="select2" id="select2" value="354">
 
-			<p class="type" id="choose">和▶︎英(ランダム)</p>
+			<p class="type" id="choose">ランダム(重複なし)</p>
 			<p class="max" id="max"></p>
 
 		</div>
@@ -46,12 +46,13 @@
 		</div>
 	
 			<p>テスト範囲</p>
-			<p>第一回　1~70</p>
-			<p>第二回　７１~１３３</p>
-			<p>第三回　１３４~１８８</p>
-			<p>第四回　１８９~２４８</p>
-			<p>第五回　249~299</p>	
-
+			<p>第一回　1〜70</p>
+			<p>第二回　７１〜１３３</p>
+			<p>第三回　１３４〜１８８</p>
+			<p>第四回　１８９〜２４８</p>
+			<p>第五回　249〜299</p>
+			<p>第6回　300〜354</p>
+	
 		<div class="use">
 			<p>使用方法</p>
 			<p>①一番上のヘッダーから問題の種類を選択</p>
@@ -72,6 +73,7 @@
 		
 		console.log("javascriptは有効です");
 		
+		//alert('アップデートのお知らせ\n内容\n①重複しないランダム機能が追加されました\n②デフォルトで選択されている問題の種類を重複なしのランダム機能に変更しました\n※このアップデートは現在pc版のみで実行されています');		
 				
 let words =
  [
@@ -145,22 +147,29 @@ let words =
  ["background","背景"],["direction","方向"],["art","芸術"],["culture","文化"],["cartoon","漫画"],
  ["novel","小説"],["instrument","楽器"],["tune","曲"],["sentence","文"],["article","記事"],
  ["passage","一節"],["vocabulary","語彙"],["rumor","うわさ"],["spell","つづる"],["pronounce","発音する"],
- ["sign","兆候"],["mean","意味する"],["publsh","出版する"],["display","展示する"]
+ ["sign","兆候"],["mean","意味する"],["publsh","出版する"],["display","展示する"] 
  ];
 
 document.getElementById("max").textContent = "　　　現在の選択可能範囲：1〜"+words.length;
 
+
+	
 //ボタンを押した時の処理ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-let ques=question1;
+let ques=question3;
 
 document.getElementById("button1").onclick = function() {
-  ques=question1;
-  document.getElementById("choose").textContent = "和▶英(ランダム)";
+  ques=question3;
+  document.getElementById("choose").textContent = "和▶英(ランダム)重複なし";
 };
 
 document.getElementById("button2").onclick = function() {
   ques=question2;
   document.getElementById("choose").textContent = "和▶英(順)";
+};
+
+document.getElementById("button3").onclick = function() {
+  ques=question1;
+  document.getElementById("choose").textContent = "和▶英(ランダム)重複あり";
 };
 
 function checking () {
@@ -200,6 +209,7 @@ function hoge(code)
 	{
 		event.preventDefault()
 	}
+
 }
 
 
@@ -298,6 +308,94 @@ function question2 ()
 
 }
 
+let iq2=0;
+
+function question3 (){
+
+	select1=document.getElementById("select1").value;
+	select2=document.getElementById("select2").value;
+	select3=select1-0;
+	select4=select2-0;
+	num=select4-select3+1;
+
+	iq2++;
+
+	console.log(select3+iq2);
+	console.log(select4);
+
+	if(iq2+select3-1>select4)
+	{
+		alert("選択範囲が終了しました。正答率は　　　"+((ok/i1)*100) +"％"+"でした。"+"ページを更新してください。");
+		return false;
+	}
+
+
+
+alert1();
+
+i1++;
+
+//random = Math.floor( Math.random() * num)+select3-1;  //words.length
+norandom();
+
+document.getElementById("QN").textContent = i1+"問目："+words[random7][1];
+document.getElementById("WN").textContent = "No."+(random7+1)+"　　";
+
+answer = words[random7][0];
+
+document.form.reset();
+}
+
+//重複なしのランダム
+
+let random7=0;
+let push=0;
+
+let num7=[];
+
+let i9=0;
+
+let ver=0;
+
+let n = num7.length;
+
+
+function norandom()
+{
+	
+	randomnum();
+
+	function randomnum()
+	{
+		push +=1
+
+		random7 = Math.floor( Math.random() * num)+select3-1; 
+
+		for(i9=0 ; i9<=num7.length ; i9++)
+		{
+			if(num7.length==num)
+			{
+				return false;
+			}
+
+			if(num7[i9]==random7)
+			{
+				randomnum();
+				return false;
+			}
+		
+		}
+
+		num7.push(random7);
+	}
+
+}
+
+	
+	
+
+
+
 //アラートーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 function alert1()
 {
@@ -318,7 +416,6 @@ if(select4>words.length)
 }
 
 }
-
 	</script>	
 
 	</main>
